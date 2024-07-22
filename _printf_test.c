@@ -30,7 +30,7 @@ for (ptr = format; *ptr != '\0' ptr++)
 	if (*ptr != '%')
 	{
 		putchar(*ptr);
-		i++;
+		ptr++;
 	}
 }
 return i;
