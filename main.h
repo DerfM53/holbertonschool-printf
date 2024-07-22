@@ -9,9 +9,11 @@ typedef struct prif
 
 /* Prototype de la function */
 
+int _putchar(char c);
 int _printf(const char *format, ...);
 
 /* déclaration des fonctions pour chaque spécificateurs */
+
 void print_char(va_list args);
 void print_string(va_list args)
 void print_percent(va_list args)
