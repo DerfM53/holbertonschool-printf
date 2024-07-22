@@ -7,6 +7,7 @@ int _printf(const char *format, ...)
 	va_list args;
 	int count = 0;
 	const char *p;
+	int d = 0;
 
 	va_start(args, format);
 
@@ -37,7 +38,7 @@ int _printf(const char *format, ...)
 			}
 			else if (*p == 'd')
 			{
-				int d = va_arg(args, int);
+				d = va_arg(args, int);
 				count += _print_number(d);
 			}
 		}
