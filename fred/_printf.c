@@ -48,10 +48,7 @@ int _printf(const char *format, ...)
 				count += _print_unsigned_number(u);
 			}
 
-		if (*p == '%')
-		{
-			p++;
-			if (*p == 'x')
+			else if (*p == 'x')
 		{
 			u = va_arg(args, unsigned int);
 			count += _print_hexadecimal(u, 0);
@@ -68,7 +65,7 @@ int _printf(const char *format, ...)
 				count += 2;
 			}
 		}
-		else
+			else
 		{
 			_putchar(*p);
 			count++;
