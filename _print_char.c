@@ -12,6 +12,12 @@ int _putchar(char c)
 	return (write(1, &c, 1));
 }
 
+/**
+ * _print_string - Prints a string.
+ * @s: String to print.
+ *
+ * Return: Number of characters printed.
+ */
 int _print_string(const char *s)
 {
 	int count = 0;

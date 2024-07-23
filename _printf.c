@@ -2,6 +2,13 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+/**
+ * _printf - Custom printf function.
+ * @format: Format string.
+ * @...: Additional arguments.
+ *
+ * Return: Number of characters printed.
+ */
 int _printf(const char *format, ...)
 {
 	va_list args;
@@ -46,6 +53,6 @@ int _printf(const char *format, ...)
 	}
 
 	va_end(args);
-
+	
 	return (count);
 }
