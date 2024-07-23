@@ -53,7 +53,7 @@ int _print_octal(unsigned int n)
 	if (n < 8)
 	{
 		_putchar(n % 8 + '0');
-		return 1;
+		return (1);
 	}
 
 	count += _print_octal(n / 8);

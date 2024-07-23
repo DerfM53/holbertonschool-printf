@@ -21,10 +21,11 @@ int _putchar(char c)
 int _print_string(const char *s)
 {
 	int count = 0;
+
 	while (*s)
 	{
 		_putchar(*s++);
 		count++;
 	}
-	return count;
+	return (count);
 }
