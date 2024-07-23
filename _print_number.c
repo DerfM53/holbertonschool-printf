@@ -40,5 +40,27 @@ int _print_unsigned_number(unsigned int n)
 
 	return (count);
 }
+/**
+ * _print_octal - Prints an unsigned integer in octal (base 8).
+ * @n: Unsigned integer to print.
+ *
+ * Return: Number of characters printed.
+ */
+int _print_octal(unsigned int n)
+{
+	int count = 0;
+
+	if (n < 8)
+	{
+		_putchar(n % 8 + '0');
+		return 1;
+	}
+
+	count += _print_octal(n / 8);
+	_putchar(n % 8 + '0');
+	count++;
+
+	return (count);
+}
 
 

@@ -7,5 +7,6 @@ int _printf(const char *format, ...);
 int _print_number(int n);
 int _print_unsigned_number(unsigned int n);
 int _print_string(const char *s);
+int _print_octal(unsigned int n);
 
 #endif

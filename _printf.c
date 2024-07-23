@@ -44,6 +44,10 @@ int _printf(const char *format, ...)
 			{
 				count += _print_unsigned_number(va_arg(args, unsigned int));
 			}
+			else if (*p == 'o')
+			{
+				count += _print_octal(va_arg(args, unsigned int));
+			}
 		}
 		else
 		{
@@ -53,6 +57,6 @@ int _printf(const char *format, ...)
 	}
 
 	va_end(args);
-	
+
 	return (count);
 }
