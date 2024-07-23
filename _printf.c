@@ -5,10 +5,8 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int count = 0;
 	const char *p;
-	int d = 0;
-	unsigned int u = 0;
+	int count = 0;
 
 	va_start(args, format);
 
@@ -19,18 +17,12 @@ int _printf(const char *format, ...)
 			p++;
 			if (*p == 'c')
 			{
-				char c = va_arg(args, int);
-				_putchar(c);
+				_putchar(va_arg(args, int));
 				count++;
 			}
 			else if (*p == 's')
 			{
-				char *s = va_arg(args, char *);
-				while (*s)
-				{
-					_putchar(*s++);
-					count++;
-				}
+				count += _print_string(va_arg(args, char *));
 			}
 			else if (*p == '%')
 			{
@@ -39,13 +31,11 @@ int _printf(const char *format, ...)
 			}
 			else if (*p == 'd' || *p == 'i')
 			{
-				d = va_arg(args, int);
-				count += _print_number(d);
+				count += _print_number(va_arg(args, int));
 			}
 			else if (*p == 'u')
 			{
-				u = va_arg(args, unsigned int);
-				count += _print_unsigned_number(u);
+				count += _print_unsigned_number(va_arg(args, unsigned int));
 			}
 		}
 		else
