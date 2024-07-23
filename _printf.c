@@ -8,6 +8,7 @@ int _printf(const char *format, ...)
 	int count = 0;
 	const char *p;
 	int d = 0;
+	unsigned int u = 0;
 
 	va_start(args, format);
 
@@ -36,10 +37,15 @@ int _printf(const char *format, ...)
 				_putchar('%');
 				count++;
 			}
-			else if (*p == 'd')
+			else if (*p == 'd' || *p == 'i')
 			{
 				d = va_arg(args, int);
 				count += _print_number(d);
+			}
+			else if (*p == 'u')
+			{
+				u = va_arg(args, unsigned int);
+				count += _print_unsigned_number(u);
 			}
 		}
 		else
