@@ -48,6 +48,12 @@ int _printf(const char *format, ...)
 			{
 				count += _print_octal(va_arg(args, unsigned int));
 			}
+			else
+			{
+				_putchar('%');
+				_putchar(*p);
+				count += 2;
+			}
 		}
 		else
 		{
