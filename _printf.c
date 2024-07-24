@@ -39,7 +39,7 @@ int _printf(const char *format, ...)
 				count += _print_octal(va_arg(args, unsigned int));
 			else if (*p == 'p')
 			{
-			addr = (unsigned long)va_arg(args, void *);
+				addr = (unsigned long)va_arg(args, void *);
 				_putchar('0'), _putchar('x');
 				count += 2, count += _print_hexadecimal(addr, 0);
 			}
