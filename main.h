@@ -1,23 +1,13 @@
 #ifndef MAIN_H
 #define MAIN_H
-
-typedef struct prif
-{
-	char *prif;	// Utilisé pour stocker un spécificateur de format (par exemple, "%d", "%s", etc.)
-	void (*f)(va_list args); // Pointeur vers une fonction qui prendra va_list comme argument
-} prif_t;
-
-/* Prototype de la function */
+#include <stdarg.h>
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-
-/* déclaration des fonctions pour chaque spécificateurs */
-
-void print_char(va_list args);
-void print_string(va_list args)
-void print_percent(va_list args)
-
-
+int _print_number(int n);
+int _print_unsigned_number(unsigned int n);
+int _print_hexadecimal(unsigned long n, int uppercase);
+int _print_octal(unsigned int n);
+int _print_string(const char *s);
 
 #endif
