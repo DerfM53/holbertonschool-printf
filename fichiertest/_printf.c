@@ -1,4 +1,6 @@
+
 #include "main.h"
+#include <stdio.h>
 #include <stdarg.h>
 /**
  * _printf - Custom printf function.
@@ -11,8 +13,8 @@ int _printf(const char *format, ...)
 	va_list args;
 	int count = 0;
 	const char *p;
-	/*unsigned int u = 0; */
-	/*unsigned long addr; */
+	unsigned int u = 0;
+	unsigned long addr;
 
 	va_start(args, format);
 	for (p = format; *p != '\0'; p++)
@@ -28,6 +30,20 @@ int _printf(const char *format, ...)
 				_putchar('%'), count++;
 			else if (*p == 'd' || *p == 'i')
 				count += _print_number(va_arg(args, int));
+			else if (*p == 'u')
+				count += _print_unsigned_number(va_arg(args, unsigned int));
+			else if (*p == 'x')
+				u = va_arg(args, unsigned int), count += _print_hexadecimal(u, 0);
+			else if (*p == 'X')
+				u = va_arg(args, unsigned int), count += _print_hexadecimal(u, 1);
+			else if (*p == 'o')
+				count += _print_octal(va_arg(args, unsigned int));
+			else if (*p == 'p')
+			{
+				addr = (unsigned long)va_arg(args, void *);
+				_putchar('0'), _putchar('x');
+				count += 2, count += _print_hexadecimal(addr, 0);
+			}
 			else
 				_putchar('%'), _putchar(*p), count += 2;
 		}
