@@ -1,0 +1,111 @@
+.TH _PRINTF 1 "25 juillet 2024" "version 1.0" "Manual page for _printf"
+
+
+.NM
+	_printf - displays formatted text
+
+.SH DESCRIPTION
+
+Function
+.B _printf
+Print formatted text to standard output.
+
+It supports the following format specifiers:
+
+
+.TP
+.B %%		: modulo
+	This specifier displays the % character.
+
+.TP
+.B %d %i 	: integer
+	These specifiers display an integer (signed integer).
+
+.TP
+.B %s 		: string caracter
+	This specifier displays a string.
+
+.TP
+.B %c 		: caracter
+	This specifier displays a character.
+
+.TP
+.B %o 		: octal
+	This specifier displays an octal-based number.
+
+.TP
+.B %x %X 	: héxadecimal
+	These specifiers display a number in hexadecimal base, in lowercase letters for %x and in uppercase letters for %X.
+
+.TP
+.B %u 		: number unsigned
+	This specifier displays an unsigned number (unsigned long).
+
+.TP
+.B %p 		: unsigned long
+	This specifier displays a pointer address (unsigned long).
+
+
+.SH OPTIONS
+
+Options are format specifiers that indicate the type of data to display:
+
+.TP
+.B "%%"
+Use this specifier to display the % character.
+
+.TP
+.B "%d" "%i"
+Use these specifiers to display a signed integer.
+
+.TP
+.B "%s"
+Use this specifier to display a string.
+
+.TP
+.B "%c"
+Use this specifier to display a character.
+
+.TP
+.B "%o"
+Use this specifier to display an octal-based number.
+
+.TP
+.B "%x" "%X"
+Use these specs to display a number in hexadecimal base, in lowercase letters for %x and in uppercase letters for %X.
+
+.TP
+.B "%u"
+Use this specifier to display an unsigned number (unsigned integer).
+
+.TP
+.B "%p"
+Use this specifier to display a pointer address (unsigned long).
+
+.SH EXAMPLES
+Here are some examples of using the function
+.B _printf :
+
+.EX
+$ _printf("Nombre : %d\n", 42)
+Nombre : 42
+
+$ _printf("Texte ; %s\n", "Bonjour")
+Texte : Bonjour
+
+$ _printf("Caractère : %c\n", 'A')
+Caractère : A
+
+.EX
+
+
+.SH AUTHORS
+Written by Stef R et Fred M.
+
+.SH SEE ALSO
+.B _printf
+\- displays text formatted in standard C.
+
+
+
+
