@@ -73,7 +73,7 @@ _printf("Character: %c\n", 'A');
 
 ```
 
-## Contributors
+### Contributors
 Stef R,
 Fred M.
 
