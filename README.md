@@ -9,19 +9,20 @@ It supports several format specifiers.
 - [Usage](#usage)
 - [Examples](#examples)
 - [Contributors](#contributors)
-- [License](#license)
+- [License](license)
 
 ## Features
 
 The `_printf` function supports the following format specifiers:
-- `%%`   : Prints the character `%`.
+
+- `%%`      : Prints the character `%`.
 - `%d` `%i` : Prints an integer.
-- `%s`   : Prints a string.
-- `%c`   : Prints a character.
-- `%o`   : Prints an octal number.
+- `%s`      : Prints a string.
+- `%c`      : Prints a character.
+- `%o`      : Prints an octal number.
 - `%x` `%X` : Prints a hexadecimal number (lowercase or uppercase).
-- `%u`   : Prints an unsigned integer.
-- `%p`   : Prints a pointer address.
+- `%u`      : Prints an unsigned integer.
+- `%p`      : Prints a pointer address.
 
 ## Installation
 
@@ -54,7 +55,7 @@ Example usage:
 ```c
 #include "main.h"
 
-int main(void) {
+int main (void) {
     int a = 2, b = 3;
     _printf("The result of %d + %d is %d\n", a, b, a + b);
     return 0;
@@ -70,11 +71,12 @@ _printf("Text: %s\n", "Hello");
 Printing a character:
 _printf("Character: %c\n", 'A');
 
+```
 
-Contributors
-Stef R
-Fred M
+## Contributors
+Stef R,
+Fred M.
 
-# License
+License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
