@@ -1,14 +1,14 @@
 #include "main.h"
 #include <unistd.h>
 /**
- * _print_number - Affiche un entier en base décimale.
- * @n: Le nombre entier à afficher.
+ * _print_number - Prints an integer in decimal base.
+ * @n: The integer to be printed.
  *
- * Cette fonction affiche le nombre entier fourni en utilisant la fonction
- * `_putchar` pour chaque chiffre. Si le nombre est négatif, elle affiche
- * le signe '-' avant de traiter la valeur absolue du nombre.
+ * This function printsthe provided integer using the '_putchar' function
+ * for each digit. If the number is negative, it prints the '-' sign before
+ * processing the absolute value of the number.
  *
- * Return: Le nombre de caractères imprimés.
+ * Return: The number of characters printed.
  */
 int _print_number(int n)
 {
@@ -26,14 +26,13 @@ int _print_number(int n)
 	return (count + 1);
 }
 /**
- * _print_unsigned_number - Affiche un entier non signé en base décimale.
- * @n: Le nombre entier non signé à afficher.
+ * _print_unsigned_number - Prints an unsigned integer in decimal base.
+ * @n: The unsigned integer to be printed.
  *
- * Cette fonction affiche le nombre entier non signé fourni en utilisant la
- * fonction `_putchar` pour chaque chiffre. Elle gère les chiffres de manière
- * récursive.
+ * This function prints the provided unsigned integer using the '_putchar' function
+ * for each digit. It handles the digits recursively.
  *
- * Return: Le nombre de caractères imprimés.
+ * Return: The number of characters printed.
  */
 int _print_unsigned_number(unsigned int n)
 {
@@ -46,16 +45,15 @@ int _print_unsigned_number(unsigned int n)
 	return (count + 1);
 }
 /**
- * _print_hexadecimal - Imprime un nombre non signé en hexadécimal.
- * @n: Le nombre non signé à imprimer.
- * @uppercase: Si non zéro, utilise des lettres majuscules;
- * sinon, des lettres minuscules.
- * Cette fonction imprime le nombre fourni en utilisant le format hexadécimal
- * (base 16). La récursion est utilisée pour traiter
- * chaque chiffre du nombre.
- * Les lettres hexadécimales sont choisies
- * en fonction de la valeur de `uppercase`.
- * Return: Le nombre de caractères imprimés.
+ * _print_hexadecimal - Prints an unsigned number in hexadecimal format.
+ * @n: The unsigned number to be printed.
+ * @uppercase: If non-zero, uses uppercase letters; otherwise, uses lowercase letters.
+ *
+ * This function prints the provided number in hexadecimal format (base 16). Recursion is used
+ * to process each digit of the number. Hexadecimal letters are chosen based on the value of
+ * 'uppercase'.
+ *
+ * Return: The number of characters printed.
  */
 int _print_hexadecimal(unsigned long n, int uppercase)
 {
@@ -68,13 +66,13 @@ int _print_hexadecimal(unsigned long n, int uppercase)
 	return (0);
 }
 /**
- * _print_octal - Imprime un nombre entier non signé en octal (base 8).
- * @n: Le nombre entier non signé à imprimer.
+ * _print_octal - Prints an unsigned integer in octal (base 8) format.
+ * @n: The unsigned integer to be printed.
  *
- * Cette fonction imprime le nombre fourni en utilisant le format octal
- * (base 8). La récursion est utilisée pour traiter chaque chiffre du nombre.
+ * This function prints the provided number in octal format (base 8). Recursion is used to
+ * process each digit of the number.
  *
- * Return: Le nombre de caractères imprimés.
+ * Return: The number of characters printed.
  */
 int _print_octal(unsigned int n)
 {
@@ -84,14 +82,14 @@ int _print_octal(unsigned int n)
 		return (0);
 }
 /**
- * _print_string - Imprime une chaîne de caractères.
- * @s: La chaîne de caractères à imprimer.
+ * _print_string - Prints a string of characters.
+ * @s: The string to be printed.
  *
- * Cette fonction affiche chaque caractère de la chaîne fournie en utilisant
- * la fonction `_putchar`. La chaîne est affichée jusqu'à
- * ce que le caractère de fin de chaîne (`\0`) soit rencontré.
+ * This function prints each character of the provided string using the '_putchar' function.
+ * The string is printed until the null termninator ('\0') is encountered.
  *
- * Return: Le nombre de caractères imprimés.
+ *
+ * Return: The number of the characters printed.
  */
 int _print_string(const char *s)
 {
