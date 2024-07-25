@@ -9,7 +9,7 @@ It supports several format specifiers.
 - [Usage](#usage)
 - [Examples](#examples)
 - [Contributors](#contributors)
-- [License][def]
+- [License](#license)
 
 ## Features
 
@@ -77,9 +77,6 @@ _printf("Character: %c\n", 'A');
 Stef R,
 Fred M.
 
-License
+### License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
-
-
-[def]: license
