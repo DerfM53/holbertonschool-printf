@@ -1,35 +1,80 @@
-# holbertonschool-printf
-Create function _printf
+# _printf
+
+`_printf` is a custom implementation of the `printf` function in C, which allows formatted text output to the standard output.
+It supports several format specifiers.
+
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Examples](#examples)
+- [Contributors](#contributors)
+- [License](#license)
+
+## Features
+
+The `_printf` function supports the following format specifiers:
+- `%%`   : Prints the character `%`.
+- `%d` `%i` : Prints an integer.
+- `%s`   : Prints a string.
+- `%c`   : Prints a character.
+- `%o`   : Prints an octal number.
+- `%x` `%X` : Prints a hexadecimal number (lowercase or uppercase).
+- `%u`   : Prints an unsigned integer.
+- `%p`   : Prints a pointer address.
+
+## Installation
+
+To use `_printf`, you first need to compile the source file.
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/your-username/holbertonschool-printf.git
+    ```
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd holbertonschool-printf/
+    ```
+
+3. Compile the source file:
+
+    ```bash
+    gcc -o _printf main.c _printf.c
+    ```
+
+## Usage
+
+Include the header file `main.h` in your code to use the `_printf` function.
+
+Example usage:
+
+```c
+#include "main.h"
+
+int main(void) {
+    int a = 2, b = 3;
+    _printf("The result of %d + %d is %d\n", a, b, a + b);
+    return 0;
+}
+Here are some examples of using the _printf function:
+
+Printing an integer:
+_printf("Number: %d\n", 42);
+
+Printing a string:
+_printf("Text: %s\n", "Hello");
+
+Printing a character:
+_printf("Character: %c\n", 'A');
 
 
-Mon main.h
-/**
- * _putchar - Écrit le caractère c sur la sortie standard
- * @c: Le caractère à imprimer
- * Return: Sur succès, le caractère écrit. Sur erreur, -1.
- *
- * _printf - Fonction principale de formatage et d'impression
- * @format: Chaîne de caractères formatée
- * Return: Le nombre de caractères imprimés (hors le caractère nul final).
- *
- * _print_number - Imprime un nombre entier
- * @n: Le nombre entier à imprimer
- * Return: Le nombre de caractères imprimés.
- *
- * _print_unsigned_number - Imprime un nombre entier non signé
- * @n: Le nombre entier non signé à imprimer
- * Return: Le nombre de caractères imprimés.
- *
- * _print_hexadecimal - Imprime un nombre en hexadécimal
- * @u: Le nombre non signé à imprimer
- * @uppercase: Si vrai, utilise des lettres majuscules, sinon des minuscules
- * Return: Le nombre de caractères imprimés.
- *
- * _print_octal - Imprime un nombre en octal
- * @n: Le nombre non signé à imprimer
- * Return: Le nombre de caractères imprimés.
- *
- * _print_string - Imprime une chaîne de caractères
- * @s: La chaîne de caractères à imprimer
- * Return: Le nombre de caractères imprimés.
- */
+Contributors
+Stef R
+Fred M
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
