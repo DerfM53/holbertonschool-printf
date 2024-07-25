@@ -9,7 +9,7 @@ It supports several format specifiers.
 - [Usage](#usage)
 - [Examples](#examples)
 - [Contributors](#contributors)
-- [License](license)
+- [License][def]
 
 ## Features
 
@@ -50,7 +50,7 @@ To use `_printf`, you first need to compile the source file.
 
 Include the header file `main.h` in your code to use the `_printf` function.
 
-Example usage:
+## Examples
 
 ```c
 #include "main.h"
@@ -80,3 +80,6 @@ Fred M.
 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
+
+[def]: license
