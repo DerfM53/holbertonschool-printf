@@ -4,12 +4,17 @@
 It supports several format specifiers.
 
 ## Table of Contents
+- [Flowcharts](#flowcharts)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Examples](#examples)
 - [Contributors](#contributors)
 - [License](#license)
+
+## Flowcharts
+
+![alt text](Flowcharts.png)
 
 ## Features
 
@@ -77,6 +82,10 @@ _printf("Character: %c\n", 'A');
 Stef R,
 Fred M.
 
+
+
 ### License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
+
